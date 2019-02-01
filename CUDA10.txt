@@ -2,7 +2,7 @@
 
 1) Add PPA:
 
-sudo add-apt-repository ppa:graphics-drivers
+sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
 
 2) Install drivers (need >=410):
