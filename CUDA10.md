@@ -1,5 +1,4 @@
 
-
 1) Add PPA:
 
 sudo add-apt-repository ppa:graphics-drivers/ppa
