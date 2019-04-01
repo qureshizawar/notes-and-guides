@@ -1,6 +1,8 @@
 Using PYTHONPATH
 PYTHONPATH is an environment variable.
 
+taken from https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html
+
 See the Python 3 docs for PYTHONPATH.
 
 The PYTHONPATH variable has a value that is a string with a list of directories that Python should add to the sys.path directory list.
