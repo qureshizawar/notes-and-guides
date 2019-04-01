@@ -1,8 +1,11 @@
 *args and **kwargs in python explained
 
+taken from: https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/
+
 Hi there folks. I have come to see that most new python programmers have a hard time figuring out the *args and **kwargs magic variables. So what are they ? First of all let me tell you that it is not necessary to write *args or **kwargs. Only the * (aesteric) is necessary. You could have also written *var and **vars. Writing *args and **kwargs is just a convention. So now lets take a look at *args first.
 
-Usage of *args 
+Usage of *args
+
 *args and **kwargs are mostly used in function definitions. *args and **kwargs allow you to pass a variable number of arguments to a function. What does variable mean here is that you do not know before hand that how many arguments can be passed to your function by the user so in this case you use these two keywords. *args is used to send a non-keyworded variable length argument list to the function. Here’s an example to help you get a clear idea:
 
 ```
@@ -24,6 +27,7 @@ another arg through *argv : test
 I hope this cleared away any confusion that you had. So now lets talk about **kwargs
 
 Usage of **kwargs
+
 **kwargs allows you to pass keyworded variable length of arguments to a function. You should use **kwargs if you want to handle named arguments in a function. Here is an example to get you going with it:
 ```
 def greet_me(**kwargs):
@@ -63,6 +67,7 @@ arg2: two
 arg3: 3
 ```
 Order of using *args **kwargs and formal args
+
 So if you want to use all three of these in functions then the order is
 ```
 some_func(fargs,*args,**kwargs)
