@@ -1,4 +1,3 @@
-
 Find:
 
 ```
@@ -17,5 +16,5 @@ wget resume download
 wget -c or --continue option to continue getting a partially downloaded file. This is useful when you want to finish a download started by a previous instance of wget, or by another program. The syntax is:
 
 ```
-wget -c url
+wget --continue url
 ```
