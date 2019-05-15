@@ -57,6 +57,8 @@ $ sudo docker run -i -t -e FOO=foo -e BAR=bar <image_name> /bin/bash
 
 ## Getting started with nvidia-docker 
 
+see https://github.com/NVIDIA/nvidia-docker for more details
+
 # If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
 ```
 docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
