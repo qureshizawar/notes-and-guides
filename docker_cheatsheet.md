@@ -1,3 +1,5 @@
+#based on https://gist.github.com/dwilkie/f8d6526edc5f1a8aca385df5113567e4 
+
 ## Build docker image
 
 ```
@@ -20,7 +22,7 @@ $ sudo docker ps -a
 Run an image in a new container daemonized
 
 ```
-$ sudo docker run -d <image_name>
+$ sudo docker run -d <image_name>https://gist.github.com/dwilkie/f8d6526edc5f1a8aca385df5113567e4
 ```
 
 Run an image in interactive mode with the command `/bin/bash`
