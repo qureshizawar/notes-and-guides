@@ -55,6 +55,12 @@ Run an image in interactive mode with the command `/bin/bash` setting the enviro
 $ sudo docker run -i -t -e FOO=foo -e BAR=bar <image_name> /bin/bash
 ```
 
+Once the container is running, you should be able to use `docker exec` to run an additional Bash session in the same container.
+
+```
+$ docker exec -it 4a7afcdeb729 bash
+```
+
 ## Getting started with nvidia-docker 
 
 see https://github.com/NVIDIA/nvidia-docker for more details
