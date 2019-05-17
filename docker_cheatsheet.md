@@ -61,6 +61,12 @@ Once the container is running, you should be able to use `docker exec` to run an
 $ docker exec -it 4a7afcdeb729 bash
 ```
 
+For Jupyter notebook, You need to run your notebook on `0.0.0.0`
+
+```
+$ jupyter notebook -i 0.0.0.0
+```
+
 ## Getting started with nvidia-docker 
 
 see https://github.com/NVIDIA/nvidia-docker for more details
