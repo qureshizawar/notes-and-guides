@@ -61,6 +61,26 @@ Once the container is running, you should be able to use `docker exec` to run an
 $ docker exec -it 4a7afcdeb729 bash
 ```
 
+Docker provides a single command that will clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container):
+```
+docker system prune
+```
+To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:
+```
+docker system prune -a
+```
+Remove one or more specific images
+Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
+
+List:
+```
+docker images -a
+```
+Remove:
+```
+docker rmi Image Image
+```
+
 For Jupyter notebook, You need to run your notebook on `0.0.0.0`
 
 ```
