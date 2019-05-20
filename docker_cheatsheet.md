@@ -81,6 +81,15 @@ Remove:
 docker rmi Image Image
 ```
 
+The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the ```--build-arg <varname>=<value>``` flag. 
+In Dockerfile:
+```
+ARG user=usr
+```
+Then set the argument when building the docker image:
+```
+docker build --build-arg user=me .
+```
 For Jupyter notebook, You need to run your notebook on `0.0.0.0`
 
 ```
