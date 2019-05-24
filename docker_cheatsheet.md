@@ -96,6 +96,8 @@ For Jupyter notebook, You need to run your notebook on `0.0.0.0`
 $ jupyter notebook -i 0.0.0.0
 ```
 
+In Docker Toolbox, nothing will be ```localhost```, and will be ```192.168.99.100``` by default, since it's running a Linux VM in VirtualBox.
+
 ## Getting started with nvidia-docker 
 
 see https://github.com/NVIDIA/nvidia-docker for more details
