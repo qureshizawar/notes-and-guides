@@ -22,6 +22,15 @@ on the server once you have executed ```ssh -R``` command on the client.
 
 This will make loopback port 48724 on the server accessible on all interfaces on port 48725.
 
+The -R option tells the tunnel to answer on the remote side, which is the SSH server and the -L option tells the tunnel to answer on the local side of the tunnel, which is the host running your client.
+-g Allows remote hosts to connect to local forwarded ports.
+
+You could also add some options to your command: ssh –f –N –T –R 2210:localhost:22 username@yourMachine.com
+-f: tells the SSH to background itself after it authenticates, saving you time by not having to run something on the remote server for the tunnel to remain alive.
+-N: if all you need is to create a tunnel without running any remote commands then include this option to save resources.
+-T: useful to disable pseudo-tty allocation, which is fitting if you are not trying to create an interactive shell.
+
 See:
+https://blog.devolutions.net/2017/3/what-is-reverse-ssh-port-forwarding
 https://askubuntu.com/questions/50064/reverse-port-tunnelling
 for more info
