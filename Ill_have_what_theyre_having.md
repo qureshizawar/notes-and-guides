@@ -34,7 +34,7 @@ ssh –f –N –T –R 2210:localhost:22 username@yourMachine.com
 ```-T```: useful to disable pseudo-tty allocation, which is fitting if you are not trying to create an interactive shell.
 
 See:
-https://unix.stackexchange.com/questions/46235/how-does-reverse-ssh-tunneling-work \
-https://blog.devolutions.net/2017/3/what-is-reverse-ssh-port-forwarding \
-https://askubuntu.com/questions/50064/reverse-port-tunnelling \
+https://unix.stackexchange.com/questions/46235/how-does-reverse-ssh-tunneling-work <br/>
+https://blog.devolutions.net/2017/3/what-is-reverse-ssh-port-forwarding <br/>
+https://askubuntu.com/questions/50064/reverse-port-tunnelling <br/>
 for more info
