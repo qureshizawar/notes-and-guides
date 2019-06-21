@@ -31,6 +31,12 @@ Run an image in interactive mode with the command `/bin/bash`
 $ sudo docker run -i -t <image_name> /bin/bash
 ```
 
+Run an image in interactive mode while mapping an exposed port 80 in Dockerfile to port 4000:
+
+```
+$ sudo docker run -it -p 4000:80 <image_name>
+```
+
 Run an image in interactive mode with the command `/bin/bash` and link the ports.
 
 ```
