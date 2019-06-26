@@ -74,3 +74,40 @@ Issue the following command to stop and start Uncomplicated Firewall (UFW).
 service iptables stop
 service iptables start
 ```
+
+Forwarding internet via SSH:
+(https://stackoverflow.com/questions/36353955/apt-get-install-via-tunnel-proxy-but-ssh-only-from-client-side)
+
+Computer A
+
+    Has access to Internet
+    Has access to Computer B
+    SSH is installed
+
+Computer B
+
+    Doesn't have access to Internet
+    OpenSSH Server is installed
+
+Steps:
+
+    ssh into Computer B from Computer A
+    ```
+    sudo ssh -R <selected port>:us.archive.ubuntu.com:80 user@computerb.host
+    ```
+
+    Edit Computer B's /etc/apt/apt.conf to include the following lines:
+
+    ```
+    Acquire::http::Proxy "http://localhost:<selected port>";
+    Acquire::https::Proxy "https://localhost:<selected port>";
+    ```
+
+    Run your apt-get update or install or upgrade on Computer B and it should work.
+
+A few notes:
+
+    You HAVE to keep the original session of ssh from Computer A to Computer B active while using Computer B to access apt-get repositories.
+    You DON'T have to use the same ssh connection to utilize the tunnel (meaning if you have multiple ssh connection into Computer B, they should all work)
+
+
