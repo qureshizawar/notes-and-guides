@@ -67,6 +67,8 @@ Once the container is running, you should be able to use `docker exec` to run an
 $ docker exec -it 4a7afcdeb729 bash
 ```
 
+To detach the tty without exiting the shell, use the escape sequence ```Ctrl-p``` ```Ctrl-q```.
+
 Docker provides a single command that will clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container):
 ```
 docker system prune
