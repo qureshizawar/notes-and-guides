@@ -1,4 +1,4 @@
-have them SSH to you (I assume you're competent enough to manage your port forwarding) and forward a port back to a ssh server on their machine.
+have them SSH to you and forward a port back to a ssh server on their machine.
 
 Get them to run:
 ```
