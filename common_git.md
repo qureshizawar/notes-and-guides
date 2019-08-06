@@ -1,4 +1,4 @@
-# Configure Git username/email
+## Configure Git username/email
 
 To set your global username/email configuration:
 Set your username:
@@ -24,7 +24,7 @@ Verify your configuration by displaying your configuration file:
 cat .git/config
 ```
 
-# changing/adding a remote:
+## changing/adding a remote:
 
 to add a new remote:
 ```
@@ -40,7 +40,7 @@ below will push your code to the master branch of the remote repository defined 
 git push -u origin master
 ```
 
-# delete a commit in git, local and remote
+## delete a commit in git, local and remote
 (see https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/ for details)
 
 see your commits:
@@ -60,6 +60,30 @@ To remove a commit you already pushed to your origin or to another remote reposi
 git push origin +master
 ```
 
-# Changing author info
+## Changing author info
 
 see https://help.github.com/en/articles/changing-author-info
+
+## ignore everything except a few files:
+(https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files)
+An optional prefix ! which negates the pattern; any matching file excluded by a previous pattern will become included again. If a negated pattern matches, this will override lower precedence patterns sources.
+
+gitignore:
+
+```
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!script.pl
+!template.latex
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+!*/a/b/file1.txt
+!*/a/b/c/*
+```
