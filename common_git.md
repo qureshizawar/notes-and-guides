@@ -64,7 +64,10 @@ git push origin +master
 
 see https://help.github.com/en/articles/changing-author-info
 
-## ignore everything except a few files:
+## Misc
+
+Ignore everything except a few files:
+
 (https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files)
 An optional prefix ! which negates the pattern; any matching file excluded by a previous pattern will become included again. If a negated pattern matches, this will override lower precedence patterns sources.
 
@@ -86,4 +89,10 @@ gitignore:
 # if the files to be tracked are in subdirectories
 !*/a/b/file1.txt
 !*/a/b/c/*
+```
+
+Clone a specific branch:
+(https://stackoverflow.com/questions/1911109/how-do-i-clone-a-specific-git-branch)
+```
+git clone --single-branch --branch <branchname> <remote-repo>
 ```
