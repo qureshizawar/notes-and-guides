@@ -732,6 +732,14 @@ cd -
 pwd # /home/user/foo
 ```
 
+### Making a directory if it does not exist
+(https://stackoverflow.com/questions/4906579/how-to-use-bash-to-create-a-folder-if-it-doesnt-already-exist)
+```
+if [ ! -d /home/mlzboy/b2c2/shared/db ]; then
+  mkdir -p /home/mlzboy/b2c2/shared/db;
+fi
+```
+
 ## Also see
 {: .-one-column}
 
