@@ -109,5 +109,20 @@ A few notes:
 
     You HAVE to keep the original session of ssh from Computer A to Computer B active while using Computer B to access apt-get repositories.
     You DON'T have to use the same ssh connection to utilize the tunnel (meaning if you have multiple ssh connection into Computer B, they should all work)
+    
+#cifs
 
+install cifs utils:
+```
+apt install cifs-utils
+```
 
+Create a mount point for the shared folder
+```
+$ sudo mkdir /shared
+```
+
+Create a persisting cifs mount in fstab by adding the following line into /etc/fstab:
+```
+//SHARE_SERVER/SHARED_FOLDER /shared cifs  username=USERNAME,noauto,user 0 0
+```
