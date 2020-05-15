@@ -126,3 +126,18 @@ Create a persisting cifs mount in fstab by adding the following line into /etc/f
 ```
 //SHARE_SERVER/SHARED_FOLDER /shared cifs  username=USERNAME,noauto,user 0 0
 ```
+
+list processes that have NVIDIA GPU device nodes open
+```
+sudo fuser -v /dev/nvidia*
+```
+
+find files less than equal to 50kB
+```
+find ./ -mindepth 1 -maxdepth 1 -type d -exec du -ks {} + | awk '$1 <= 50' | cut -f 2-
+```
+
+find and delete files less less than equal to 50kB
+```
+find ./debug -mindepth 1 -maxdepth 1 -type d -exec du -ks {} + | awk '$1 <= 50' | cut -f 2- | xargs -d \\n rm -rf 
+```
